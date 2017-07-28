@@ -1,0 +1,14 @@
+{
+  "name": "businesslayout1",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",    
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-material": "latest",    
+    "angular-bootstrap": "^1.3.2",
+    "angular-sanitize": "^1.5.8"
+  }
+}
