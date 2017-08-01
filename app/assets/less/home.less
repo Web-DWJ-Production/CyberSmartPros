@@ -1,0 +1,237 @@
+.carousel-nav() {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: 0.5s all ease-in-out;
+    i { font-size: 60px; color: rgba(255,255,255,1);}
+
+    &:hover { background: rgba(0,0,0,0.8);}
+}
+
+.carousel-nav-mini() {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: 0.7s all ease-in-out;    
+    i { font-size: 30px; color: rgba(255,255,255,1);}
+}
+
+.home {
+    /*Carousel*/
+    .carousel-container { 
+        height: calc(~"100vh - 50px");
+        overflow: hidden;
+        position: relative; 
+        background: @color4;       
+        ui-carousel {
+            height: 90vh;
+            margin: 0px;
+            position: relative;            
+            .carousel-wrapper {
+                height: 100%;
+                position: relative;
+                .track-wrapper {
+                    height: 100%;
+                    .track{
+                        height: 100%;
+                        .slide {
+                            height: 100%;
+                            .carousel-item {                        
+                                height: 100%;
+                                position: relative;                                
+                                .item-image { 
+                                    width: 100%; 
+                                    max-height: 100%;
+                                    img { position: relative; z-index: 0; height: 100%; width: 100%; }
+                                    .texture-overlay {
+                                        position: absolute;
+                                        z-index: 1;
+                                        top: 0px;
+                                        left: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-image: url(../images/grid.png);
+                                    } 
+                                }
+                                .cover-text-box { 
+                                    background: rgba(0,0,0,0.5);
+                                    color: rgba(255,255,255,1);
+                                    position: absolute;
+                                    bottom: 100px;
+                                    left: 10%;
+                                    padding: 10px;
+                                    width: 40%;
+                                    border-radius: 20px;
+                                    z-index: 2;     
+                                    .box-title { font-size: 3rem;}                               
+                                    .box-text { font-size: 2rem; }
+                                }
+                            }  
+                        }
+                    }                    
+                }
+                .carousel-prev { 
+                    .carousel-nav;
+                    left: 2%;                     
+                }
+                .carousel-next { 
+                    .carousel-nav; 
+                    right: 2%;                     
+                }
+            }
+        }
+    }
+
+    /*Section 1*/
+    .content-container {
+        padding: 50px;
+        position: relative;
+        .content-title { font-size: 2em; margin-bottom: 20px; font-weight: bold; text-align: center; }
+        .content-text { font-size: 1.2em; line-height: 1.8em; }
+        
+        .service-container {
+            padding: 0px 10px;
+            .service-icon { 
+                display: inline-block;
+                margin-right: 25px;
+                width: 90px;
+                height: 90px;
+                color: rgba(255,255,255,1);            
+                border: solid 2px rgba(255,255,255,1);
+                border-radius: 50%;
+                vertical-align: top;
+                text-align: center;
+                font-size: 25px;
+                line-height: 90px;
+                transition: 0.5s all ease-in-out;                
+            }
+            .service-title {
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 5px 0px;
+            }
+            .service-text { 
+                font-size: 1em;
+                line-height: 2em;
+            }
+            
+            &:hover {
+                .service-icon {
+                    color: @color4;
+                    background: rgba(255,255,255,1);
+                }
+            }
+        }
+
+        .background-img-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .texture-overlay {
+                position: absolute;
+                z-index: 3;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/grid.png);
+            }
+            .gradient-overlay {
+                position: absolute;
+                top:0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(45deg, @color5 20%, @color3 60%, @color4);
+                opacity: 0.8; 
+             }
+            .parallax-backimg { 
+                position: relative;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        }
+
+        .service-area-container {
+            position: relative;
+            z-index: 5;
+            color: rgba(255,255,255,1);
+        }
+
+        /*News Carousel*/
+        .news-carousel-container { 
+            height: 100%;
+            overflow: hidden;
+            position: relative;       
+            ui-carousel {
+                height: 100%;
+                margin: 0px;
+                position: relative;            
+                .carousel-wrapper {
+                    height: 100%;
+                    position: relative;
+                    .track-wrapper {
+                        height: 100%;
+                        .track{
+                            height: 100%;
+                            .slide {
+                                height: 100%;
+                                .carousel-item {                        
+                                    height: 100%;
+                                    width: 75%;
+                                    position: relative;
+                                    margin: auto;                                                        
+                                    .news-text-box {                                                                       
+                                        padding: 10px;                                                                                                              
+                                        .news-text { 
+                                            font-size: 1em;
+                                            span { 
+                                                color: @color4;
+                                                font-size: 2.5em;
+                                                font-weight: bold;
+                                                padding: 0px 5px;                                                
+                                            }
+                                        }
+                                        .news-date { font-size: .8em; color: @color4; font-weight: bold;}
+                                    }
+                                }  
+                            }
+                        }                    
+                    }
+                    .carousel-prev { 
+                        .carousel-nav-mini;
+                        background: @color4-fade;
+                        left: 2%;
+                        &:hover { background: @color4;}                     
+                    }
+                    .carousel-next { 
+                        .carousel-nav-mini; 
+                        background: @color4-fade;
+                        right: 2%;
+                        &:hover { background: @color4;}                     
+                    }
+                }
+            }
+        }
+    }
+}
+           
+              

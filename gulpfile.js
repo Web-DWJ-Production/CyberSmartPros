@@ -21,6 +21,9 @@ var config = {
     appLess: [
       'app/assets/less/*.less'
     ],
+    appImgs: [
+      'app/assets/images/**'
+    ],
     libsJs: [
       'app/assets/libs/jquery/dist/jquery.min.js',
       'app/assets/libs/bootstrap/dist/js/bootstrap.min.js',
@@ -31,14 +34,16 @@ var config = {
       'app/assets/libs/angular-aria/angular-aria.min.js',
       'app/assets/libs/angular-messages/angular-messages.min.js',      
       'app/assets/libs/angular-bootstrap/ui-bootstrap.min.js',
-      'app/assets/libs/angular-bootstrap/ui-bootstrap-tpls.js'
+      'app/assets/libs/angular-bootstrap/ui-bootstrap-tpls.js',
+      'app/assets/libs/angular-ui-carousel/dist/ui-carousel.min.js'
     ],
     libsCSS: [
       'app/assets/libs/angular-material/angular-material.min.css',
       'app/assets/libs/bootstrap/dist/css/bootstrap.min.css',
       'app/assets/libs/font-awesome/css/font-awesome.min.css',
       'app/assets/libs/animate.css/animate.min.css',
-      'app/assets/libs/angular-bootstrap/ui-bootstrap-csp.css'
+      'app/assets/libs/angular-bootstrap/ui-bootstrap-csp.css',
+      'app/assets/libs/angular-ui-carousel/dist/ui-carousel.min.css'
     ],
     libsFonts: [
       'app/assets/libs/font-awesome/fonts/**',
@@ -54,6 +59,7 @@ var config = {
     appJs:'public/js',
     appCSS:'public/css',
     appFonts:'public/fonts',
+    appImgs: 'public/images',
     base: 'public'
   }
 };
@@ -76,6 +82,12 @@ gulp.task('app-less', function(){
       .pipe(less())
       .pipe(minifyCSS())
       .pipe(gulp.dest(config.dest.appCSS));
+});
+
+gulp.task('app-imgs', function(){
+  // Move all images into one the public fonts folder
+  return gulp.src(config.src.appImgs)
+      .pipe(gulp.dest(config.dest.appImgs));
 });
 
 gulp.task('lib-js', function(){
@@ -110,4 +122,4 @@ gulp.task('build-html', function(){
     
     return merge(tasks);
 });
-gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js','app-js', 'app-less'], 'build-html'));
+gulp.task('all', gulpSequence('clean', ['lib-fonts', 'lib-css', 'lib-js', 'app-imgs', 'app-js', 'app-less'], 'build-html'));
