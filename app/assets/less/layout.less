@@ -8,6 +8,7 @@
 @color3: #AAABB8;
 @color4: #2E9CCA;
 @color4-fade: rgba(46,156,202,0.4);
+@color4-fade-8: rgba(46,156,202,0.8);
 @color5: #29648A;
 
 * {
@@ -366,4 +367,20 @@ body {
     bottom: -20px;
     background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.3) 53%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 55%,rgba(0,0,0,0) 100%);
   }
+}
+
+.footer-container {
+    .main-section { 
+        background: @color2;
+        padding: 50px 20px;
+        color: rgba(255,255,255,1);
+        justify-content: space-between;
+        .row-column {                        
+            .sub-row { display: block; }
+        }
+    }
+    .sub-section { 
+        height: 40px;
+        background: @color1;
+    }
 }

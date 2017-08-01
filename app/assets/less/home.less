@@ -2,26 +2,28 @@
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); 
-    background: rgba(0,0,0,0.3);
+    background: @color4-fade;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     transition: 0.5s all ease-in-out;
     i { font-size: 60px; color: rgba(255,255,255,1);}
 
-    &:hover { background: rgba(0,0,0,0.8);}
+    &:hover { background: @color4;}
 }
 
 .carousel-nav-mini() {
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); 
-    background: rgba(0,0,0,0.3);
+    background: @color4-fade;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     transition: 0.7s all ease-in-out;    
     i { font-size: 30px; color: rgba(255,255,255,1);}
+
+    &:hover { background: @color4;}
 }
 
 .home {
@@ -62,7 +64,7 @@
                                     } 
                                 }
                                 .cover-text-box { 
-                                    background: rgba(0,0,0,0.5);
+                                    background: @color4-fade-8;
                                     color: rgba(255,255,255,1);
                                     position: absolute;
                                     bottom: 100px;
@@ -218,15 +220,11 @@
                     }
                     .carousel-prev { 
                         .carousel-nav-mini;
-                        background: @color4-fade;
-                        left: 2%;
-                        &:hover { background: @color4;}                     
+                        left: 2%;                     
                     }
                     .carousel-next { 
-                        .carousel-nav-mini; 
-                        background: @color4-fade;
-                        right: 2%;
-                        &:hover { background: @color4;}                     
+                        .carousel-nav-mini;                        
+                        right: 2%;                     
                     }
                 }
             }
