@@ -1,11 +1,20 @@
+/*Screen Sizes*/
+@mobile-screen: ~"only screen and (max-width: 640px)";
+
 /* Fonts */
 @font-size: 16px;
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Lato|Nunito');
 
 /*Color Themes*/
 @color1: #25274D;
+@color1-fade: rgba(37,39,77,0.4);
+@color1-fade-8: rgba(37,39,77,0.8);
+
 @color2: #464866;
 @color3: #AAABB8;
+@color3-fade: rgba(170,171,184, 0.4);
+@color3-fade-7: rgba(170,171,184, 0.7);
 @color4: #2E9CCA;
 @color4-fade: rgba(46,156,202,0.4);
 @color4-fade-8: rgba(46,156,202,0.8);
@@ -15,14 +24,47 @@
   margin: 0;
   &:focus { outline: none;}
 }
-html { background: rgba(255,255,255,1);}
-body {    
-    padding-top: 50px;
-    font-size: @font-size;
+html, body {
+  height: 100%;  
+  background: rgba(255,255,255,1);      
+  font-size: @font-size;
+  font-family: 'Nunito', sans-serif;
+  //font-family: 'Lato', sans-serif;
+  @media @mobile-screen {
+    font-size: 14px;
+  }
 }
+body { padding-top: 50px;}
 
 .navbar {
-
+  background: @color1-fade-8;
+  border-color: @color1-fade-8;
+  .navbar-header {    
+    .navbar-brand { 
+      display: flex;
+      color: rgba(255,255,255,1);
+      img { height: 20px; }
+      span { padding-left: 5px; }
+    }
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      li {
+        &.open { li { a { color: @color1-fade-8; }}}
+        a{ color: rgba(255,255,255,1);}
+        .dropdown-menu { 
+          background: @color1-fade-8;  
+          border-color: @color1-fade-8;
+          li {
+            a { 
+              color: rgba(255,255,255,1);
+              &:hover { color: @color1-fade-8; }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .mainBody {
@@ -33,13 +75,133 @@ body {
         }
         
         .content-container {
+          position: relative;
+          padding: 4%;
+          &.full-row { padding: 0;}
           &.content-text {
             padding: 30px 10%;
             text-align: center;
-            font-size: 1.4em;
-            line-height: 1.7em;
+            font-size: 1.4rem;
+            line-height: 3rem;
+            .bold { font-weight: bold;}
+          }
+
+           .content-title {            
+              .title-txt { 
+                  font-size: 2em; 
+                  margin-bottom: 20px; 
+                  font-weight: bold; 
+                  text-align: center;
+                  display: block;
+              }
+              .line {
+                  border-top: 4px solid @color4;
+                  height: 10px;
+                  width: 60px;
+                  text-align: center;
+                  margin: 0 auto;
+                  margin-top: 5px;
+                  hr {
+                      border-top: 4px solid @color1-fade;
+                      width: 40px;
+                      text-align: center;
+                      margin-top: 10px;
+                      margin-bottom: 0px;
+                      position: relative;
+                      left: 17%;
+                      border-color: @color1;
+                      border-width: 4px;
+                      width: 40px;
+                      float: left;
+                      clear: both;
+                  }
+              }
+
+              &.add-line {
+                  margin-bottom: 20px;
+                  .title-txt { margin-bottom: 5px; }
+              }
+          }
+
+          .service-container {
+              padding: 10px;
+              .service-icon { 
+                  display: inline-block;                
+                  width: 90px;
+                  height: 90px;
+                  color: rgba(255,255,255,1);            
+                  border: solid 2px rgba(255,255,255,1);
+                  border-radius: 50%;
+                  vertical-align: top;
+                  text-align: center;
+                  font-size: 25px;
+                  line-height: 90px;
+                  transition: 0.5s all ease-in-out;                
+              }
+              .service-title {
+                  font-size: 1.5em;
+                  font-weight: bold;
+                  padding: 5px 0px;
+              }
+              .service-text { 
+                  font-size: 1em;
+                  line-height: 2em;
+              }
+              
+              &:hover {
+                  .service-icon {
+                      color: @color4;
+                      background: rgba(255,255,255,1);
+                  }
+              }
+          }
+
+          .background-img-container {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+
+              .texture-overlay {
+                  position: absolute;
+                  z-index: 3;
+                  top: 0px;
+                  left: 0px;
+                  width: 100%;
+                  height: 100%;
+                  background-image: url(../images/grid.png);
+              }
+              .gradient-overlay {
+                  position: absolute;
+                  top:0;
+                  left: 0;
+                  z-index: 2;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(45deg, @color5 20%, @color3 60%, @color4);
+                  opacity: 0.8; 
+              }
+              .parallax-backimg { 
+                  position: relative;
+                  z-index: 1;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-attachment: fixed;
+              }
+          }
+
+          .service-area-container {
+              position: relative;
+              z-index: 5;
+              color: rgba(255,255,255,1);
           }
         }
+
         .subpage-header {
           height: 300px;
           position: relative;
@@ -91,6 +253,7 @@ body {
                   background-repeat: no-repeat;
                   background-size: cover;
                   background-attachment: fixed;
+                  background-position: 30% 100%;
               }
           }
         }
@@ -125,14 +288,15 @@ body {
     width: 70px;
     height: 140px;
     position: relative;
-    //position: absolute;
-    //bottom: -90px;
-    //left: -30px;
+    
     border-radius: 5px;
     background: #000;
     border: 25px solid #2f343e;
     border-left: 5px solid #2f343e;
     border-right: 5px solid #2f343e;
+
+    margin: 10px auto;
+
     &:before, &:after { content: ""; position: absolute; left: 50%; background: #474e5d;}
     &:before {
       background: #474e5d;

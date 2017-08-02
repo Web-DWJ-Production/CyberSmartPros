@@ -2,14 +2,14 @@
     position: absolute;
     top: 50%; 
     transform: translateY(-50%); 
-    background: @color4-fade;
+    background: @color1-fade;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     transition: 0.5s all ease-in-out;
     i { font-size: 60px; color: rgba(255,255,255,1);}
 
-    &:hover { background: @color4;}
+    &:hover { background: @color1;}
 }
 
 .carousel-nav-mini() {
@@ -32,7 +32,7 @@
         height: calc(~"100vh - 50px");
         overflow: hidden;
         position: relative; 
-        background: @color4;       
+        background: @color1;       
         ui-carousel {
             height: 90vh;
             margin: 0px;
@@ -62,9 +62,14 @@
                                         height: 100%;
                                         background-image: url(../images/grid.png);
                                     } 
+
+                                    @media @mobile-screen {
+                                        height: 100%;
+                                        img { width: initial; }
+                                    }
                                 }
                                 .cover-text-box { 
-                                    background: @color4-fade-8;
+                                    background: @color1-fade-8;
                                     color: rgba(255,255,255,1);
                                     position: absolute;
                                     bottom: 100px;
@@ -72,9 +77,16 @@
                                     padding: 20px;
                                     width: 40%;
                                     border-radius: 20px;
-                                    z-index: 2;     
-                                    .box-title { font-size: 3rem;}                               
-                                    .box-text { font-size: 2rem; }
+                                    z-index: 2;                                                                                                       
+                                    
+                                    .box-title { font-size: 2.5rem;}                               
+                                    .box-text { font-size: 1.5rem; }
+
+                                    @media @mobile-screen {
+                                        width: 80%;
+                                        .box-title { font-size: 1.5rem;}                               
+                                        .box-text { font-size: .8rem; }
+                                    }
                                 }
                             }  
                         }
@@ -94,89 +106,19 @@
 
     /*Section 1*/
     .content-container {
-        padding: 50px;
+        padding: 4%;
         position: relative;
-        .content-title { font-size: 2em; margin-bottom: 20px; font-weight: bold; text-align: center; }
+
+        .css-object {            
+            &.css-computer { display: block; }
+            &.css-phone { display: none; }
+            @media @mobile-screen {
+                &.css-computer { display: none;}
+                &.css-phone { display: block; }
+             }
+        }       
         .content-text { font-size: 1.2em; line-height: 1.8em; }
         
-        .service-container {
-            padding: 0px 10px;
-            .service-icon { 
-                display: inline-block;
-                margin-right: 25px;
-                width: 90px;
-                height: 90px;
-                color: rgba(255,255,255,1);            
-                border: solid 2px rgba(255,255,255,1);
-                border-radius: 50%;
-                vertical-align: top;
-                text-align: center;
-                font-size: 25px;
-                line-height: 90px;
-                transition: 0.5s all ease-in-out;                
-            }
-            .service-title {
-                font-size: 1.5em;
-                font-weight: bold;
-                padding: 5px 0px;
-            }
-            .service-text { 
-                font-size: 1em;
-                line-height: 2em;
-            }
-            
-            &:hover {
-                .service-icon {
-                    color: @color4;
-                    background: rgba(255,255,255,1);
-                }
-            }
-        }
-
-        .background-img-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            .texture-overlay {
-                position: absolute;
-                z-index: 3;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                background-image: url(../images/grid.png);
-            }
-            .gradient-overlay {
-                position: absolute;
-                top:0;
-                left: 0;
-                z-index: 2;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(45deg, @color5 20%, @color3 60%, @color4);
-                opacity: 0.8; 
-             }
-            .parallax-backimg { 
-                position: relative;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-            }
-        }
-
-        .service-area-container {
-            position: relative;
-            z-index: 5;
-            color: rgba(255,255,255,1);
-        }
 
         /*News Carousel*/
         .news-carousel-container { 

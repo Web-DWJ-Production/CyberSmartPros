@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Business Layout 1 - DKW Design </title>
+        <title>Cyber Smart Pros</title>
         
-        <link rel="shortcut icon" type="image/x-icon" href="">
+        <link rel="shortcut icon" type="image/x-icon" href="images/logos/Cyber-Smart-Pros-logo.png">
         <link href="css/libs.min.css" rel="stylesheet">
         <link href="css/styles.min.css" rel="stylesheet">
     </head>
@@ -22,7 +22,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Business Name</a>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/Cyber-Smart-Pros-logo.png"> <span>Cyber Smart Pros</span></a>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">                    
@@ -31,7 +31,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Company <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="#">Mission, Vision, & Values</a></li>
+                                <li><a href="aboutus.html#mission-vision-value">Mission, Vision, & Values</a></li>
                                 <li><a href="#">Executive Team</a></li>                                
                             </ul>
                         </li>
@@ -48,7 +48,7 @@
             <div class="content-body home" ng-controller="HomePage as cc">
     <!-- Home Carousel -->
     <div class="carousel-container">        
-        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="true" autoplay-speed="7000" dots="false">
+        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="false" autoplay-speed="7000" dots="false">
             <carousel-item>                
                 <div class="item-image">
                     <div class="texture-overlay"></div>
@@ -74,6 +74,8 @@
     <div class="content-container">
         <div class="row-layout" layout="row" layout-xs="column">
             <div class="row-column" flex>
+                
+                <!-- Computer -->
                 <div class="css-object css-computer screen">
                     <div class="content">
                         <div class="pg">
@@ -99,12 +101,28 @@
                         <div class="shadow"></div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="css-object css-phone">
+                    <div class="screen">
+                        <div class="content">
+                        <ul class="txt">
+                            <li ng-repeat="i in $ctrl.getNumber(3) track by $index"></li>
+                        </ul>
+                        </div>
                     </div>
+
+                    <div class="shadow"></div>
+                </div>
             </div>
             <div class="row-column" flex>
-                <div class="content-title">Some Words About Us</div>
+                <div class="content-title add-line">
+                    <div class="title-txt">Some Words About Us</div>
+                    <div class="line"><hr></div>
+                </div>
                 <div class="content-text">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    We provide information technology and management consulting services to federal, state, and local governments as well as private sector companies. Its core services are advisory, cybersecurity, and software development services. The Company is a verified Service Disabled Veteran Owned Small Business (SDVOSB) by the U.S. Department of Veterans Affairs. The Virginia Department of  Small Business and Supplier Diversity certified the company as a service-disabled veteran, minority-owned, and a micro business.
                 </div>
             </div>
         </div>
@@ -117,7 +135,7 @@
             <div class="parallax-backimg" back-img={{cc.dividerImg}}></div>
         </div>
         <div class="service-area-container">
-            <div class="content-title">Our Services</div>
+            <div class="content-title"><div class="title-txt">Our Services</div></div>
             <div class="row-layout" layout="row" layout-xs="column">
                 <div class="row-column" flex ng-repeat="service in cc.services">
                     <div class="service-container">
@@ -131,7 +149,10 @@
     </div>
     <!-- Section 3 -->
     <div class="content-container">
-        <div class="content-title">Latest News</div>
+        <div class="content-title add-line">
+            <div class="title-txt">Latest News</div>
+            <div class="line"><hr></div>
+        </div>
         <div class="news-carousel-container">        
             <ui-carousel slides="cc.latestNews" slides-to-scroll="1" autoplay="true" autoplay-speed="7000" dots="false">
                 <carousel-item>                                    
@@ -164,9 +185,9 @@
                     <div class="sub-row">info@cybersmartpros.com</div>
                 </div>
                 <div class="row-column" flex>
-                    <div class="sub-row"><a href="#">Home</a></div>                    
-                    <div class="sub-row"><a href="#">About Us</a></div>
-                    <div class="sub-row"><a href="#">Mission, Vision, Values</a></div>
+                    <div class="sub-row"><a href="index.html">Home</a></div>                    
+                    <div class="sub-row"><a href="aboutus.html">About Us</a></div>
+                    <div class="sub-row"><a href="aboutus.html#mission-vision-value">Mission, Vision, Values</a></div>
                     <div class="sub-row"><a href="#">Executive Team</a></div>                    
                 </div>
                 <div class="row-column" flex>

@@ -13,15 +13,15 @@ pageControllers.controller('HomePage', [function(){
       ctrl.title = "Home";
 
       ctrl.slides = [
-          {'img':'images/demo1.jpg', 'title':'Title 1', 'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-          {'img':'images/demo2.jpg', 'title':'Title 2', 'text':'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
-          {'img':'images/demo3.jpg', 'title':'Title 3', 'text':'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
+          {'img':'images/demo3.jpg', 'title':'Who We Are', 'text':'Providing Information technology and management consulting services to federal, state, and local governments as well as private sector companies/'},
+          {'img':'images/cyber-network.jpg', 'title':'Title 2', 'text':'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+          {'img':'images/metro1.jpg', 'title':'Title 3', 'text':'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
       ];
 
       ctrl.services = [
-          {'icon':'card_membership', 'title':'Service 1', 'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-          {'icon':'important_devices', 'title':'Service 2', 'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-          {'icon':'backup', 'title':'Service 3', 'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+          {'icon':'card_membership', 'title':'Advisory', 'text':'Our advisory services provide an independent and objective examination of an organization’s records and activities.'},
+          {'icon':'important_devices', 'title':'Cybersecurity', 'text':'Our cybersecurity services are based on the NIST Risk Management Framework (NIST SP 800-37) for federal, state and local customers. '},
+          {'icon':'backup', 'title':'Software Development', 'text':'Our experts support multiple software development methodologies (Agile, Waterfall, Spiral, Scrum, Kanban, DevOps, etc.) to meet the differing needs of our customers.'}
       ];
 
       ctrl.latestNews = [
