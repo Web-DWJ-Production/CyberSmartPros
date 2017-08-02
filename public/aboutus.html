@@ -22,12 +22,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Business Name</a>
+                    <a class="navbar-brand" href="index.html">Business Name</a>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Company <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="#">Mission, Vision, & Values</a></li>
+                                <li><a href="#">Executive Team</a></li>                                
+                            </ul>
+                        </li>
                         <li><a href="#">Capabilities</a></li>
                         <li><a href="#">Clients</a></li>
                         <li><a href="#">Join Our Team</a></li>
@@ -38,7 +45,21 @@
         </nav>
 
         <div class="mainBody">
-            <p>Test File 2</p>
+            <div class="content-body about">
+    <div class="subpage-header">
+        <div class="header-title">About Us</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/demo2.jpg"></div>
+        </div>       
+    </div>
+
+    <div class="content-container content-text">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+    </div>
+
+</div>
         </div>
 
         <!-- footer -->
@@ -53,9 +74,11 @@
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="#">Home</a></div>                    
                     <div class="sub-row"><a href="#">About Us</a></div>
-                    <div class="sub-row"><a href="#">Capabilities & Services</a></div>
+                    <div class="sub-row"><a href="#">Mission, Vision, Values</a></div>
+                    <div class="sub-row"><a href="#">Executive Team</a></div>                    
                 </div>
-                <div class="row-column" flex>                    
+                <div class="row-column" flex>
+                    <div class="sub-row"><a href="#">Capabilities & Services</a></div>                    
                     <div class="sub-row"><a href="#">Clients</a></div>
                     <div class="sub-row"><a href="#">Join Our Team</a></div>                    
                     <div class="sub-row"><a href="#">Contact Us</a></div>                    
