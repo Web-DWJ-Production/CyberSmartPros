@@ -27,16 +27,32 @@
 }
 
 .home {
+    -webkit-animation:0.5s fadeInDown ease;
+    animation:0.5s fadeInDown ease;
     /*Carousel*/
     .carousel-container { 
         height: calc(~"100vh - 50px");
         overflow: hidden;
         position: relative; 
-        background: @color1;       
+        background: @color1;
+        .back-title { 
+            font-size: 4rem;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width:100%;
+            z-index: 0;
+            color: rgba(255,255,255,1);
+            font-weight: bold;
+            text-align: center
+        }       
         ui-carousel {
             height: 90vh;
             margin: 0px;
             position: relative;            
+            z-index: 1;
             .carousel-wrapper {
                 height: 100%;
                 position: relative;
@@ -55,13 +71,23 @@
                                     img { position: relative; z-index: 0; height: 100%; width: 100%; }
                                     .texture-overlay {
                                         position: absolute;
-                                        z-index: 1;
+                                        z-index: 2;
                                         top: 0px;
                                         left: 0px;
                                         width: 100%;
                                         height: 100%;
                                         background-image: url(../images/grid.png);
                                     } 
+                                    .color-overlay {
+                                        position: absolute;
+                                        z-index: 1;
+                                        top: 0px;
+                                        left: 0px;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: linear-gradient(45deg, @color2 20%, @color3 60%, @color2);
+                                        opacity: 0.5;
+                                    }
 
                                     @media @mobile-screen {
                                         height: 100%;

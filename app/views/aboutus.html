@@ -4,7 +4,7 @@
         <div class="background-img-container">
             <div class="texture-overlay"></div>
             <div class="gradient-overlay"></div>
-            <div class="parallax-backimg" back-img="images/washington-dc2.jpg"></div>
+            <div class="parallax-backimg" back-img="images/washington-dc2-mini.jpg"></div>
         </div>       
     </div>
 
@@ -52,3 +52,28 @@
     </div>
 
 </div>
+
+<!-- Smooth Scroll -->
+<script>
+  // Need this for "newer" versions of jQuery, which have removed $.browser
+  $.browser = $.browser || {msie: false};
+</script>
+<script>
+    $('html, body').hide();
+
+    $(document)        
+    .ready(function() {
+        $(window).bind('hashchange', function(event) {
+            var tgt = location.hash.replace(/^#\/?/, '');
+            if (document.getElementById(tgt)) {
+                $('html, body').show();
+                $('body')[0].scrollTop = 0;
+                $.smoothScroll({scrollTarget: '#' + tgt});
+            }
+            else {
+                $('html, body').show();
+            }
+        });        
+        $(window).trigger('hashchange');
+    });
+</script>

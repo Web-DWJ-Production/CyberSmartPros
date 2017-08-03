@@ -1,10 +1,12 @@
 <div class="content-body home" ng-controller="HomePage as cc">
     <!-- Home Carousel -->
-    <div class="carousel-container">        
-        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="false" autoplay-speed="7000" dots="false">
+    <div class="carousel-container">
+        <div class="back-title">Cyber Smart Pros</div>        
+        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="true" autoplay-speed="7000" dots="false">
             <carousel-item>                
                 <div class="item-image">
                     <div class="texture-overlay"></div>
+                    <div class="color-overlay"></div>
                     <img src="{{item.img}}">
                 </div>
                 <div class="cover-text-box">

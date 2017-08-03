@@ -1,5 +1,33 @@
 .about {
-    .content-container {              
+    .content-container { 
+        &#mission-vision-value {
+            padding-top: 59px;
+        }
+        &.executive-team {
+            .row-column {                
+                &.bio {
+                    font-size: 1.2rem;
+                    line-height: 2.5rem;
+                    text-align: left;
+
+                    p{
+                        &+p{ padding-top: 10px; border-top: 3px solid @color5;}
+                    }
+                }
+                .bold { font-weight: bold;}
+            }
+
+            .certificates {
+                background: @color3-fade;
+                padding: 10px;
+                border-radius: 5px;
+                .row-column {
+                    height: 100px;
+                    padding: 5px;
+                    img { height: 100%; }
+                }
+            }
+        }
         .cetification-container { 
             background: @color3-fade;           
             .row-column {

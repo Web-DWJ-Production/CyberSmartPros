@@ -13,8 +13,8 @@ pageControllers.controller('HomePage', [function(){
       ctrl.title = "Home";
 
       ctrl.slides = [
-          {'img':'images/demo3.jpg', 'title':'Who We Are', 'text':'Providing Information technology and management consulting services to federal, state, and local governments as well as private sector companies/'},
-          {'img':'images/cyber-network.jpg', 'title':'Title 2', 'text':'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
+          {'img':'images/cyber-network.jpg', 'title':'Who We Are', 'text':'Providing Information Technology and Management Consulting services to federal, state, and local governments as well as private sector companies.'},
+          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'},
           {'img':'images/metro1.jpg', 'title':'Title 3', 'text':'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
       ];
 

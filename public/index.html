@@ -9,6 +9,9 @@
         <link rel="shortcut icon" type="image/x-icon" href="images/logos/Cyber-Smart-Pros-logo.png">
         <link href="css/libs.min.css" rel="stylesheet">
         <link href="css/styles.min.css" rel="stylesheet">
+
+        <script src="js/libs.min.js"></script>
+        <script src="js/bundle.js"></script>
     </head>
 
     <body ng-app="BusinessSite">
@@ -32,7 +35,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="aboutus.html">About Us</a></li>
                                 <li><a href="aboutus.html#mission-vision-value">Mission, Vision, & Values</a></li>
-                                <li><a href="#">Executive Team</a></li>                                
+                                <li><a href="executiveTeam.html">Executive Team</a></li>                                
                             </ul>
                         </li>
                         <li><a href="#">Capabilities</a></li>
@@ -47,11 +50,13 @@
         <div class="mainBody">
             <div class="content-body home" ng-controller="HomePage as cc">
     <!-- Home Carousel -->
-    <div class="carousel-container">        
-        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="false" autoplay-speed="7000" dots="false">
+    <div class="carousel-container">
+        <div class="back-title">Cyber Smart Pros</div>        
+        <ui-carousel slides="cc.slides" slides-to-scroll="1" autoplay="true" autoplay-speed="7000" dots="false">
             <carousel-item>                
                 <div class="item-image">
                     <div class="texture-overlay"></div>
+                    <div class="color-overlay"></div>
                     <img src="{{item.img}}">
                 </div>
                 <div class="cover-text-box">
@@ -188,7 +193,7 @@
                     <div class="sub-row"><a href="index.html">Home</a></div>                    
                     <div class="sub-row"><a href="aboutus.html">About Us</a></div>
                     <div class="sub-row"><a href="aboutus.html#mission-vision-value">Mission, Vision, Values</a></div>
-                    <div class="sub-row"><a href="#">Executive Team</a></div>                    
+                    <div class="sub-row"><a href="executiveTeam.html">Executive Team</a></div>                    
                 </div>
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="#">Capabilities & Services</a></div>                    
@@ -197,10 +202,12 @@
                     <div class="sub-row"><a href="#">Contact Us</a></div>                    
                 </div>                
             </div>
-            <div class="sub-section"></div>           
-        </div>
-        
-        <script src="js/libs.min.js"></script>
-        <script src="js/bundle.js"></script>
+            <div class="sub-section">
+                 <div class="row-layout" layout="row" layout-xs="column">
+                    <div class="row-column left" flex>CYBER SMART PROS © COPYRIGHT 2017</div>
+                    <div class="row-column right" flex>SITE DESIGNED BY <a href="">DWJ PRODUCTIONS WEB</a></div>
+                 </div>
+            </div>           
+        </div>       
     </body>
 </html>

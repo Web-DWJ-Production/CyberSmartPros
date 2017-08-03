@@ -35,7 +35,8 @@ var config = {
       'app/assets/libs/angular-messages/angular-messages.min.js',      
       'app/assets/libs/angular-bootstrap/ui-bootstrap.min.js',
       'app/assets/libs/angular-bootstrap/ui-bootstrap-tpls.js',
-      'app/assets/libs/angular-ui-carousel/dist/ui-carousel.min.js'
+      'app/assets/libs/angular-ui-carousel/dist/ui-carousel.min.js',
+      'app/assets/libs/jquery-smooth-scroll/jquery.smooth-scroll.min.js'
     ],
     libsCSS: [
       'app/assets/libs/angular-material/angular-material.min.css',
@@ -51,7 +52,8 @@ var config = {
     ],
     htmlFiles: [
         {'filename': 'index', 'locationname':'home.html'},
-        {'filename': 'aboutus', 'locationname':'aboutus.html'}
+        {'filename': 'aboutus', 'locationname':'aboutus.html'},
+        {'filename': 'executiveTeam', 'locationname':'executiveTeam.html'}
     ],
     htmlLocation: "app/views/"
   },
