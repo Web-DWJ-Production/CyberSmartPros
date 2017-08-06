@@ -53,6 +53,7 @@ var config = {
     htmlFiles: [
         {'filename': 'index', 'locationname':'home.html'},
         {'filename': 'aboutus', 'locationname':'aboutus.html'},
+        {'filename': 'capabilities', 'locationname':'capabilities.html'},
         {'filename': 'executiveTeam', 'locationname':'executiveTeam.html'}
     ],
     htmlLocation: "app/views/"
