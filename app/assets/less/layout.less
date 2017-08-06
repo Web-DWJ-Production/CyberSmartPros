@@ -20,6 +20,9 @@
 @color4-fade-8: rgba(46,156,202,0.8);
 @color5: #29648A;
 
+@margin: 25px;
+@padding: 50px 50px 0 50px;
+
 * {
   margin: 0;
   &:focus { outline: none;}
@@ -32,6 +35,10 @@ html, body {
   //font-family: 'Lato', sans-serif;
   @media @mobile-screen {
     font-size: 14px;
+  }
+  @media @mobile-screen {
+    margin: 0;
+    padding: 50px 0 0 0;
   }
 }
 body { padding-top: 50px;}
@@ -610,7 +617,7 @@ body { padding-top: 50px;}
 }
 
 .section {
-  padding: 50px 50px 0 50px;
+  padding: @padding;
 
   .section-header {
 
@@ -622,11 +629,30 @@ body { padding-top: 50px;}
 
   .section-header-underline {
       width: 100%;
-      border-bottom: 2px solid @color2;
+      border-bottom: 3px solid @color2;
+  }
+
+  .section-map {
+    font-size: 1.4rem;
+    padding: 15px 0 50px 0;
+    margin: auto;
+    width: 90%;
+    min-width: 300px;
+
+    .contactus {
+      padding: 15px 0;
+    }
+
+    i {
+      position: relative;
+      top: 5px;
+      color: @color3;
+      padding-right: 5px;
+    }
   }
 
   .section-content {
-    margin: 25px;
+    margin: @margin;
     font-size: 1.4rem;
     line-height: 3rem;
 
