@@ -21,7 +21,6 @@
 @color5: #29648A;
 
 @margin: 25px;
-@padding: 50px 50px 0 50px;
 
 * {
   margin: 0;
@@ -35,10 +34,6 @@ html, body {
   //font-family: 'Lato', sans-serif;
   @media @mobile-screen {
     font-size: 14px;
-  }
-  @media @mobile-screen {
-    margin: 0;
-    padding: 50px 0 0 0;
   }
 }
 body { padding-top: 50px;}
@@ -617,7 +612,7 @@ body { padding-top: 50px;}
 }
 
 .section {
-  padding: @padding;
+  padding: 50px 50px 0 50px;
 
   .section-header {
 
@@ -672,6 +667,28 @@ body { padding-top: 50px;}
       }
     }
   }
+}
+
+@media (max-width : 520px) {
+
+  .section {
+    padding: 0;
+
+    .section-header {
+      text-align: center;
+    }
+
+    .section-content {
+      margin: 5;
+      font-size: 1.0rem;
+    }
+
+     li {
+        font-size: 0.8rem;
+      }
+
+  }
+
 }
 
 .footer-container {
