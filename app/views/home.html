@@ -93,11 +93,11 @@
             <div class="content-title"><div class="title-txt">Our Services</div></div>
             <div class="row-layout" layout="row" layout-xs="column">
                 <div class="row-column" flex ng-repeat="service in cc.services">
-                    <div class="service-container">
+                    <a href="{{ service.url }}" class="service-container">
                         <div class="service-icon"><i class="material-icons">{{service.icon}}</i></div>
                         <div class="service-title">{{ service.title}}</div>
                         <div class="service-text">{{ service.text}}</div>
-                    </div>
+                    </a>
                 </div>            
             </div>
         </div>
