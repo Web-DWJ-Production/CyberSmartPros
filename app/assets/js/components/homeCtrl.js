@@ -6,7 +6,7 @@ pageControllers.controller('HomePage', [function(){
 
       ctrl.slides = [
           {'img':'images/cyber-network.jpg', 'title':'Who We Are', 'text':'Providing Information Technology and Management Consulting services to federal, state, and local governments as well as private sector companies.'},
-          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'With our growing local and government clients we are based out of the Washington D.C. / Northern Virgina Areas.'},
+          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'With our growing local and government clients we are based out of the Washington D.C. / Northern Virginia Areas.'},
           {'img':'images/computer-color.jpg', 'title':'What We Do', 'text':'We leverage information technology so our customers can focus on their missions.'}
       ];
 
