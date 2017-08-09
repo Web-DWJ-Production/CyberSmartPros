@@ -1,0 +1,26 @@
+<div class="content-body clients" ng-controller="ClientsPage as cc">
+    <div class="subpage-header">
+        <div class="header-title">Key Clients</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/teamwork.jpg"></div>
+        </div>       
+    </div>
+
+    <div class="content-container content-text">
+        At <span class="bold">Cyber Smart Pros, LLC</span> our clients are very important to us, we work to create a great working dynamic so that everyone we interact with thinks of us as an integral part of their teams.  This helps us to accomplish our vision to ensure that "we all win together".
+    </div>
+
+    <!-- Home Carousel -->
+    <div class="carousel-container keyclients">               
+        <ui-carousel slides="cc.slides" slides-to-show="3" slides-to-scroll="3" autoplay="false" arrows="false" autoplay-speed="7000" dots="true">
+            <carousel-item>                
+                <div class="item-content">                    
+                    <img src="{{item.img}}">
+                    <div class="item-title-container"><div class="item-title"><a href="{{item.url}}" target="_blank">{{ item.title }}</a></div></div>
+                </div>                
+            </carousel-item>            
+        </ui-carousel>
+    </div>
+</div>

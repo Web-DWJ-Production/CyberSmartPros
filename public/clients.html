@@ -58,86 +58,32 @@
         </nav>
 
         <div class="mainBody">
-            <div class="content-body about">
+            <div class="content-body clients" ng-controller="ClientsPage as cc">
     <div class="subpage-header">
-        <div class="header-title">About Us</div> 
+        <div class="header-title">Key Clients</div> 
         <div class="background-img-container">
             <div class="texture-overlay"></div>
             <div class="gradient-overlay"></div>
-            <div class="parallax-backimg" back-img="images/washington-dc2-mini.jpg"></div>
+            <div class="parallax-backimg" back-img="images/teamwork.jpg"></div>
         </div>       
     </div>
 
     <div class="content-container content-text">
-        <span class="bold">Cyber Smart Pros, LLC (CSP)</span> provides information technology and management consulting services to federal, state, and local governments as well as private sector companies. Its core services are advisory, cybersecurity, and software development services. The Company is a verified Service Disabled Veteran Owned Small Business (SDVOSB) by the U.S. Department of Veterans Affairs. The Virginia Department of  Small Business and Supplier Diversity certified the company as a service-disabled veteran, minority-owned, and a micro business.
-    </div>
-    <!-- Certifications -->
-    <div class="content-container full-row">
-        <div class="row-layout cetification-container" layout="row" layout-xs="column">
-            <div class="row-column" flex>
-                <img src="images/logos/sdvosb.png">
-            </div>
-            <div class="row-column" flex>
-                <img src="images/logos/swam-logo.png">
-            </div>
-        </div>
+        At <span class="bold">Cyber Smart Pros, LLC</span> our clients are very important to us, we work to create a great working dynamic so that everyone we interact with thinks of us as an integral part of their teams.  This helps us to accomplish our vision to ensure that "we all win together".
     </div>
 
-    <!-- Mission & Vision -->
-    <div class="content-container" id="mission-vision-value">        
-        <div class="content-title add-line">
-            <div class="title-txt">Mission, Vision, & Values</div>
-            <div class="line"><hr></div>
-        </div>
-        
-        <div class="content-list-row">
-            <div class="list-row-title"><i class="material-icons">business</i> <span>Mission Statement</span></div>
-            <div class="list-row-text">We leverage information technology so our customers can focus on their mission.</div>
-        </div>
-
-        <div class="content-list-row">
-            <div class="list-row-title"><i class="material-icons">remove_red_eye</i> <span>Vision Statement</span></div>
-            <div class="list-row-text">Our customers think of as an integral part of their teams - we all win together.</div>
-        </div>
-
-        <div class="content-list-row">
-            <div class="list-row-title"><i class="material-icons">wb_incandescent</i> <span>Values</span></div>
-            <div class="list-row-list">
-                <div class="list-item"><span>Integrity in Everything :</span> Our word is our bond. We build relationships on trust.</div>
-                <div class="list-item"><span>Mission First :</span> We only have one priority: solve the customer’s problem.</div>
-                <div class="list-item"><span>People Always :</span> We take care of our people so they can take care of the mission.</div>
-            </div>
-        </div>
-        
+    <!-- Home Carousel -->
+    <div class="carousel-container keyclients">               
+        <ui-carousel slides="cc.slides" slides-to-show="3" slides-to-scroll="3" autoplay="false" arrows="false" autoplay-speed="7000" dots="true">
+            <carousel-item>                
+                <div class="item-content">                    
+                    <img src="{{item.img}}">
+                    <div class="item-title-container"><div class="item-title"><a href="{{item.url}}" target="_blank">{{ item.title }}</a></div></div>
+                </div>                
+            </carousel-item>            
+        </ui-carousel>
     </div>
-
 </div>
-
-<!-- Smooth Scroll -->
-<script>
-  // Need this for "newer" versions of jQuery, which have removed $.browser
-  $.browser = $.browser || {msie: false};
-</script>
-<script>
-    $('html, body').hide();
-
-    $(document)        
-    .ready(function() {
-        $(window).bind('hashchange', function(event) {
-            var tgt = location.hash.replace(/^#\/?/, '');
-            if (document.getElementById(tgt)) {
-                $('html, body').show();
-                $('body')[0].scrollTop = 0;
-                $.smoothScroll({scrollTarget: '#' + tgt});
-            }
-            else {
-                $('html, body').show();
-            }
-        });        
-        $(window).trigger('hashchange');
-    });
-</script>
-
         </div>
 
         <!-- footer -->

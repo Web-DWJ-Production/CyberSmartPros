@@ -1,0 +1,60 @@
+.keyclients {    
+    ui-carousel {
+        background-color: rgba(245,245,245, 0.8);
+        margin-bottom: 80px;
+        padding-bottom: 80px;        
+        .carousel-wrapper {
+            .track-wrapper {
+                padding: 10px 0px;
+                .track {                    
+                    .slide {                                              
+                        .carousel-item {
+                            overflow: hidden;
+                            .item-content { 
+                                text-align: center;
+                                padding: 10px;
+                                @media @mobile-screen { min-height: 265px; position: relative; }
+                                img { 
+                                    height: 100px;
+                                    max-width: 100%;
+                                    @media @mobile-screen { width: 100%; height: initial; }
+                                }
+                                .item-title-container {
+                                    text-align: center;
+                                    @media @mobile-screen { width: calc(~"100% - 20px"); position: absolute; bottom: 0; font-size: .8rem; }
+                                    .item-title { 
+                                        margin-top: 30px; 
+                                        text-align: center;
+                                        display: inline-block;
+                                        background-color: @color3-fade; 
+                                        padding: 5px 10px; 
+                                        border-radius: 5px;
+                                        transition: 0.3s all ease-in;
+                                        a { color: @color1; font-weight: bold; transition: 0.3s all ease-in;}
+
+                                        &:hover, &:focus { 
+                                            background-color: @color1;
+                                            a{ color: rgba(255,255,255,1); text-decoration: none; }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-dots{
+                margin-top: 50px;
+                li { 
+                    button {
+                        &:before {
+                            background-color: @color1;
+                            border-radius: 50%;
+                            content: "";
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}

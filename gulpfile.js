@@ -55,7 +55,9 @@ var config = {
         {'filename': 'aboutus', 'locationname':'aboutus.html'},
         {'filename': 'capabilities', 'locationname':'capabilities.html'},
         {'filename': 'contactus', 'locationname':'contactus.html'},
-        {'filename': 'executiveTeam', 'locationname':'executiveTeam.html'}
+        {'filename': 'executiveTeam', 'locationname':'executiveTeam.html'},
+        {'filename': 'comingSoon', 'locationname':'ComingSoon.html'},
+        {'filename': 'clients', 'locationname':'clients.html'}
     ],
     htmlLocation: "app/views/"
   },
