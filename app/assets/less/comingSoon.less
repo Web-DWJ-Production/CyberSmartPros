@@ -1,4 +1,5 @@
 .comingSoon {
+    overflow-x: hidden;
     .full-background-img-container {
         position: relative;
         z-index: 0;        
@@ -41,9 +42,17 @@
         position: absolute;
         z-index: 1;
         color: rgba(255,255,255,1);
-        top: 50%;
+        top: 40%;
         left: 10%;
+        transform: translateY(-50%);
         .comingText { font-size: 1.5rem; padding-left: 10px; }
         .comingTitle { font-weight: bold; font-size: 7rem; line-height: 5.5rem;}
+
+        @media @mobile-screen {
+            width: 100%;
+            left: 2px;
+            .comingTitle { font-size: 3rem; line-height: 3rem;}
+            .comingText { font-size: 1rem; }
+        }
     }
 }

@@ -62,8 +62,15 @@ body { padding-top: 50px;}
     .navbar-brand { 
       display: flex;
       color: rgba(255,255,255,1);
-      img { height: 20px; }
-      span { padding-left: 5px; }
+      .img-logo {
+        height: 20px;
+        width: 20px;
+        padding: 2px;
+        background-color: rgba(255,255,255,1);
+        border-radius: 50%;
+        img { height: 100%; vertical-align: top; }
+      }
+      .title-logo { padding-left: 5px; }
     }
   }
   .navbar-collapse {
@@ -88,7 +95,9 @@ body { padding-top: 50px;}
 
 .mainBody {
     .content-body {
-        min-height: 800px;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
         .row-layout {
             .row-column { 
               text-align: center;              
@@ -732,12 +741,19 @@ body { padding-top: 50px;}
         height: 40px;
         background: @color1;
         padding: 10px 5%;
+
+        @media @mobile-screen { height: initial;}
         .row-layout {
           .row-column {
             color: rgba(255,255,255,1);
             font-size: .8rem;
             &.left { text-align: left;}
             &.right { text-align: right; }
+
+            @media @mobile-screen {
+              padding: 2px 0px;
+              &.left { text-align: right;}
+            }
 
             a { 
               color: rgba(230,230,230,0.8);
