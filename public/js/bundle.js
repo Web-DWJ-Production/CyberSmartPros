@@ -39,8 +39,8 @@ pageControllers.controller('HomePage', [function(){
       ctrl.title = "Home";
 
       ctrl.slides = [
-          {'img':'images/cyber-network.jpg', 'title':'Who We Are', 'text':'Providing Information Technology and Management Consulting services to federal, state, and local governments as well as private sector companies.'},
-          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'With our growing local and government clients we are based out of the Washington D.C. / Northern Virginia Areas.'},
+          {'img':'images/cyber-network.jpg', 'title':'Who We Are', 'text':'Innovative IT professionals committed to your success.'},
+          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'With a growing number of clients we are based out of the Washington, D.C. area.'},
           {'img':'images/computer-color.jpg', 'title':'What We Do', 'text':'We leverage information technology so our customers can focus on their missions.'}
       ];
 
@@ -53,9 +53,35 @@ pageControllers.controller('HomePage', [function(){
       ctrl.latestNews = [
           {'date':new Date("2015-08-01 00:00:00"), 'text':'Our founder started exploring his business idea for Cyber Smart Pros.'},
           {'date':new Date("2015-11-26 00:00:00"), 'text':'Cyber Smart Pros has officially become a Virginia Limited Liability Company (LLC).'},
-          {'date':new Date("2017-08-09 00:00:00"), 'text':'We have partnered with DWJ Production to deploy a new website focused at capturing the company ideals and display our ever growing web presence.'}          
+          {'date':new Date("2016-06-01 00:00:00"), 'text':'Cyber Smart Pros gets it first customer.'},          
+          {'date':new Date("2017-05-01 00:00:00"), 'text':'Cyber Smart Pros becomes a verified Service Disabled Veteran Owned Small Business (SDVOSB).'},
+          {'date':new Date("2017-06-01 00:00:00"), 'text':'Cyber Smart Pros becomes a certified SWaM and veteran-owned business in the State of Virginia.'},        
+          {'date':new Date("2017-08-01 00:00:00"), 'text':'Cyber Smart Pros hires it first employee.'},
+          {'date':new Date("2017-08-18 00:00:00"), 'text':'We have partnered with DWJ Production to deploy a new website focused at capturing the company ideals and display our ever growing web presence.'},           
+          {'date':new Date("2017-09-01 00:00:00"), 'text':'Cyber Smart Pros opens an office in Leesburg, VA.'}
       ];
       ctrl.dividerImg = 'images/cityview-above.jpg';
+
+      ctrl.getNumber = function(num) {
+          return new Array(num);
+      }  
+      
+
+}]);
+"use strict";
+
+pageControllers.controller('JoinusPage', [function(){
+      var ctrl = this;
+      ctrl.title = "Join Our Team";
+      
+      ctrl.benifits = [
+          {"id":"1", "title":"Retirement and Savings Plans", "icon":"account_balance", "content":["401K Contribution Matching – 100% up to 3%; 50% up to 5%", "401K is 100% fully vested after 90 days"]},
+          {"id":"2", "title":"Health Related Benefits", "icon":"local_hospital", "content":["Medical, Dental, and Vision Insurance","Personal Accident Insurance", "Life Insurance", "Additional Voluntary Life Insurance", "Short Term Disability Insurance", "Long Term Disability Insurance", "Employee Assistance", "Health and Wellness Program", "Health Club Discount", "Medical and Dependent Care Flexible Spending Accounts"]},
+          {"id":"3", "title":"Education and Career Development", "icon":"school", "content":["Reimbursement for qualifying training expenses", "Rewards for obtaining new IT certifications", "Computer-based training library on IT and information security topics and certifications", "Remote access to a virtual lab for testing/learning opportunities"]},
+          {"id":"4", "title":"Paid Time Off", "icon":"flight_takeoff", "content":["Comprehensive (Vacation/Sick) Leave (15 paid days a year)", "Federal Holidays (10 paid days a year)", "Paid Maternity/Paternity Leave", "Paid Jury Duty", "Paid Bereavement Leave", "Paid Military Leave"]},
+          {"id":"5", "title":"Other Work/Life Benefits", "icon":"work", "content":["Flexible Work Schedules", "Pre-tax Commuter Benefits", "Employee Referral Bonus Program", "Up to $100 per month reimbursed for cell phone", "Up to $50 per month reimbursed for home internet", "Up to $200 every 2 years for a cell phone upgrade"]}
+      ];
+       
 
       ctrl.getNumber = function(num) {
           return new Array(num);
@@ -69,6 +95,22 @@ directives.directive('backImg', ['$window', function($window) {
     link: function ($scope, element, attrs) {
       var url = attrs.backImg;
       element.css({'background-image': 'url(' + url +')'});
+    }
+  }
+}]);
+directives.directive('scrollMovement', ['$window', function($window) {
+  return {
+    restrict: 'EA',
+    link: function ($scope, element, attrs) {     
+
+      var divBody = attrs.scrollcontainer;
+      var scrollId = attrs.scrollid;
+
+      element.bind('click', function() {
+        var scrollOffset = $("#1")[0].offsetLeft;
+        var idLoc = $(scrollId)[0].offsetLeft - scrollOffset;
+        $(divBody).animate({ scrollLeft: idLoc}, "slow");
+      });
     }
   }
 }]);

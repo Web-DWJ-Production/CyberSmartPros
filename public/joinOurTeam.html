@@ -66,18 +66,46 @@
         </nav>
 
         <div class="mainBody">
-            <div class="content-body comingSoon">
-    
-    <div class="full-background-img-container">
-        <div class="texture-overlay"></div>
-        <div class="gradient-overlay"></div>
-        <div class="parallax-backimg" back-img="images/construction.jpg"></div>
-    </div>  
-    
-    <div class="comingContent">
-        <div class="comingText top">Our Website Is Going Through A Re-design</div>
-        <div class="comingTitle">Under Construction</div>
-        <div class="comingText bottom">Please Check Back Shortly For This Content</div>
+            <div class="content-body joinUs" ng-controller="JoinusPage as cc">
+    <!--<div class="nav-sub-header">
+        <div class="header-title">Join Our Team</div>             
+    </div>-->
+
+    <div class="subpage-header">
+        <div class="header-title">Join Our Team</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/teamGroup-mini.jpg"></div>
+        </div>       
+    </div>
+
+    <div class="content-container content-text">
+        <div class="text-line">Cyber Smart Pros is solely focused on providing IT professional services to our customers.  Our success is based on hiring and retaining the best people to work on collaborative teams. Because IT is constantly changing, our company culture encourages and values continuous professional development. We believe a good work/life balance includes community/charity involvement. Our benefits package is an investment in each cyber smart pro that joins us.</div>
+        <div class="text-line">Besides competitive salaries, each cyber smart pro enjoys a full menu of benefits:</div>
+    </div>
+
+    <div class="content-container benifits">
+        <div class="benifits-nav">
+            <div class="benifit-item" ng-repeat="item in cc.benifits" scroll-movement scrollid="#{{item.id}}" scrollcontainer="#benifitCont">
+                <div class="icon-container"><i class="material-icons">{{item.icon}}</i></div>
+                <div class="icon-text">{{item.title}}</div>
+            </div>
+        </div>
+
+        <div class="benifits-info-container" id="benifitCont">
+            <div class="benifits-info-card" ng-repeat="item in cc.benifits" ng-attr-id="{{item.id}}">
+                <div class="benifit-title">{{item.title}}</div>
+                <ul class="section-content-list">
+                    <li ng-repeat="benifit in item.content"><i class='material-icons'>&#xE86C;</i> <span>{{benifit}}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container content-text">
+        <div class="text-line">Cyber Smart Pros is an Equal Opportunity/Affirmative Action Employer. We are committed to hiring and retaining a diverse workforce. We give equal consideration to all qualified candidates without regard to race, religion, creed, gender identity, national origin, sex, pregnancy, marital status, age, sexual orientation, disability, veteran status, or any other protected class.</div>
+        <div class="text-line">To inquire about jobs, please email your resume to <span class="email">jobs@cybersmartpros.com</span>.</div>
     </div>
 </div>
         </div>
