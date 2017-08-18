@@ -7,10 +7,17 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
+<<<<<<< HEAD
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+=======
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+>>>>>>> 1e79857c06ace2b2ed78dead36060b355bf2209e
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -79,48 +86,50 @@
         </nav>
 
         <div class="mainBody">
-            <style>
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-</style>
-
-<div class="section">
-    <div class="section-header">
-        <h2>Cyber Smart Pros Headquarters</h2>
+            <div class="content-body about">
+    <div class="subpage-header">
+        <div class="header-title">Our Leadership</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/business-seated2.jpg"></div>
+        </div>       
     </div>
-    <div class="section-header-underline"></div>
-    <div class="section-map">
-        <div class="contactus">
-            <div><i class="material-icons">&#xE0C8;</i> 202 Church St SE, Leesburg, VA 20175, US</div>
-            <div><i class="material-icons">&#xE0D0;</i> info@cybersmartpros.com</div>
-            <div><i class="material-icons">&#xE0CF;</i> 703-678-9053</div>
+
+    <div class="content-container executive-team">
+        <div class="row-layout" layout="row" layout-xs="column">
+            <div class="row-column" flex>
+                <img class="circular_img" src="images/bJordan_01.png">
+            </div>
+            <div class="row-column size-2 bio" flex>
+                    <p><span class="bold">Boykin B. Jordan, Jr.</span> is the founder and President of Cyber Smart Pros, LLC. Mr. Jordan is a seasoned Information Technology (IT) executive with a reputation for building relationships and creating value in organizations. </p>
+                    
+                <p>During his successful 26-year military career in the Air Force, he reached the rank of Colonel. Throughout his career, he served in progressively more demanding IT roles to include Chief Information Officer (CIO) and Chief Information Security Officer (CISO). In multiple assignments, he was responsible for providing enterprise IT services to over 9,000 users globally on a daily basis. He participated in several combat operations and earned a Bronze Star for his service in Operation Iraqi Freedom.</p>
+                    
+                <p>After leaving the Air Force in 2010, Mr. Jordan entered the corporate arena. He successfully led a 4-year IT transformation and modernization project for a U.S. Department of Defense (DoD) organization before becoming an entrepreneur.</p>
+
+                <p>Mr. Jordan received a bachelors degree in math from The Citadel, The Military College of South Carolina where he was a Distinguished Graduate of the U.S. Air Force Reserve Officers’ Training Corps (ROTC). He has two IT-related master degrees. One from Webster University in Saint Louis, Missouri. The second from the National Defense University’s iCollege on Fort McNair in Washington, D.C.</p>
+
+                <p>In addition to his formal academic education, Mr. Jordan maintains several professional certifications to stay current with industry best practices. His certifications include: Certified Information System Security Professional (CISSP), Certified Information Systems Auditor (CISA), and Project Management Professional (PMP).</p>
+
+                <div class="certificates row-layout" layout="row" layout-xs="column">                    
+                    <div class="row-column" flex>
+                        <img src="images/logos/cissp-logo.png">
+                    </div>
+
+                    <div class="row-column" flex>
+                        <img src="images/logos/cisa.png">
+                    </div>
+
+                    <div class="row-column" flex>
+                        <img src="images/logos/Professional-Engineer.png">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="map"></div>
     </div>
+
 </div>
-
-
-<script>
-    function initMap() {
-        var uluru = { lat: 	39.1130484, lng: -77.565853};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuwkRt4Mde-XNOF3vBESuIikYAiTF4gCg&callback=initMap">
-
-</script>
-</script>
         </div>
         <div class="push"></div>
     </div>

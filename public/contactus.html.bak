@@ -7,10 +7,17 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
+<<<<<<< HEAD
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+=======
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+>>>>>>> 1e79857c06ace2b2ed78dead36060b355bf2209e
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -94,7 +101,7 @@
     <div class="section-map">
         <div class="contactus">
             <div><i class="material-icons">&#xE0C8;</i> 202 Church St SE, Leesburg, VA 20175, US</div>
-            <div><i class="material-icons">&#xE0D0;</i> info@cybersmartpros.com</div>
+            <div><i class="material-icons">&#xE0D0;</i> <a href="mailto:info@cybersmartpros.com">info@cybersmartpros.com</a></div>
             <div><i class="material-icons">&#xE0CF;</i> 703-678-9053</div>
         </div>
         <div id="map"></div>

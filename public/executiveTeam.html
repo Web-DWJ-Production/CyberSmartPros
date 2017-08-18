@@ -7,10 +7,10 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -81,7 +81,7 @@
         <div class="mainBody">
             <div class="content-body about">
     <div class="subpage-header">
-        <div class="header-title">Executive Team</div> 
+        <div class="header-title">Our Leadership</div> 
         <div class="background-img-container">
             <div class="texture-overlay"></div>
             <div class="gradient-overlay"></div>
@@ -95,13 +95,15 @@
                 <img class="circular_img" src="images/bJordan_01.png">
             </div>
             <div class="row-column size-2 bio" flex>
-                <p><span class="bold">Boykin  B. Jordan, Jr.</span>,  is the founder and President of Cyber Smart Pros, LLC. Mr. Jordan is a seasoned Information Technology (IT) executive with 33 years of experience.</p>
+                    <p><span class="bold">Boykin B. Jordan, Jr.</span> is the founder and President of Cyber Smart Pros, LLC. Mr. Jordan is a seasoned Information Technology (IT) executive with a reputation for building relationships and creating value in organizations. </p>
                     
-                <p>He started his IT career with the United States Air Force. During his successful 26-year military career, he served as a Chief Information Officer (CIO) providing enterprise IT services to over 9,000 users and was awarded a Bronze Star for his service in Operation Iraqi Freedom.  For his second career, Mr. Jordan chose to be an entrepreneur and active in his community. He has formed a 501(c)(3) non-profit and served as the President of his homeowners’ association.  
+                <p>During his successful 26-year military career in the Air Force, he reached the rank of Colonel. Throughout his career, he served in progressively more demanding IT roles to include Chief Information Officer (CIO) and Chief Information Security Officer (CISO). In multiple assignments, he was responsible for providing enterprise IT services to over 9,000 users globally on a daily basis. He participated in several combat operations and earned a Bronze Star for his service in Operation Iraqi Freedom.</p>
                     
-                <p>Mr. Jordan received his bachelors degree from The Citadel. He has two masters degrees. One from Webster University and the second from the National Defense University’s iCollege.</p>
+                <p>After leaving the Air Force in 2010, Mr. Jordan entered the corporate arena. He successfully led a 4-year IT transformation and modernization project for a U.S. Department of Defense (DoD) organization before becoming an entrepreneur.</p>
 
-                <p>Mr. Jordan’s current professional certifications include the Certified Information System Security Professional (CISSP), Certified Information Systems Auditor (CISA), and Project Management Professional (PMP). He has been happily married to his high school sweetheart, Bonita, for the last 33 years.</p>
+                <p>Mr. Jordan received a bachelors degree in math from The Citadel, The Military College of South Carolina where he was a Distinguished Graduate of the U.S. Air Force Reserve Officers’ Training Corps (ROTC). He has two IT-related master degrees. One from Webster University in Saint Louis, Missouri. The second from the National Defense University’s iCollege on Fort McNair in Washington, D.C.</p>
+
+                <p>In addition to his formal academic education, Mr. Jordan maintains several professional certifications to stay current with industry best practices. His certifications include: Certified Information System Security Professional (CISSP), Certified Information Systems Auditor (CISA), and Project Management Professional (PMP).</p>
 
                 <div class="certificates row-layout" layout="row" layout-xs="column">                    
                     <div class="row-column" flex>
@@ -133,13 +135,13 @@
                     <div class="sub-row">Feedback is the lifeblood of our business.</div>
                     <div class="sub-row">Please contact us at:</div>
                     <div class="sub-row">703-678-9053</div>
-                    <div class="sub-row">info@cybersmartpros.com</div>
+                    <a id="footer-email" class="sub-row" href="#">info@cybersmartpros.com</a>
                 </div>
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="index.html">Home</a></div>
                     <div class="sub-row"><a href="aboutus.html">About Us</a></div>
                     <div class="sub-row"><a href="aboutus.html#mission-vision-value">Mission, Vision, Values</a></div>
-                    <div class="sub-row"><a href="executiveTeam.html">Executive Team</a></div>
+                    <div class="sub-row"><a href="executiveTeam.html">Our Leadership</a></div>
                 </div>
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="capabilities.html">Capabilities & Services</a></div>
@@ -157,5 +159,12 @@
         </div>
     </div>
 </body>
+
+<script>
+        var link = document.getElementById('footer-email');
+        link.onclick = function () {
+            this.href = "mailto:info@cybersmartpros.com?subject=Data&body=cybersmartpros.com";
+        };
+</script>
 
 </html>

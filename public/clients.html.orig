@@ -7,10 +7,17 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
+<<<<<<< HEAD
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+=======
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+>>>>>>> 1e79857c06ace2b2ed78dead36060b355bf2209e
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -79,48 +86,32 @@
         </nav>
 
         <div class="mainBody">
-            <style>
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-</style>
-
-<div class="section">
-    <div class="section-header">
-        <h2>Cyber Smart Pros Headquarters</h2>
+            <div class="content-body clients" ng-controller="ClientsPage as cc">
+    <div class="subpage-header">
+        <div class="header-title">Key Clients</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/teamwork.jpg"></div>
+        </div>       
     </div>
-    <div class="section-header-underline"></div>
-    <div class="section-map">
-        <div class="contactus">
-            <div><i class="material-icons">&#xE0C8;</i> 202 Church St SE, Leesburg, VA 20175, US</div>
-            <div><i class="material-icons">&#xE0D0;</i> info@cybersmartpros.com</div>
-            <div><i class="material-icons">&#xE0CF;</i> 703-678-9053</div>
-        </div>
-        <div id="map"></div>
+
+    <div class="content-container content-text">
+       At <span class="bold">Cyber Smart Pros, LLC</span> we have one priority: solve the customer's problem. Simply put, helping our clients to succeed is the most important thing we do. Adhering to our ethos "Succeed, First By Helping Others to Succeed!" is our secret sauce for building customer relationships. We remove "us" and "them" from the conversation, so that everyone wins - in doing so we accomplish our vision - customers that think of us as an integral part of their team.
+    </div>
+
+    <!-- Home Carousel -->
+    <div class="carousel-container keyclients">               
+        <ui-carousel slides="cc.slides" slides-to-show="3" slides-to-scroll="3" autoplay="true" arrows="false" autoplay-speed="10000" dots="true">
+            <carousel-item>                
+                <div class="item-content">                    
+                    <img src="{{item.img}}">
+                    <div class="item-title-container"><div class="item-title"><a href="{{item.url}}" target="_blank">{{ item.title }}</a></div></div>
+                </div>                
+            </carousel-item>            
+        </ui-carousel>
     </div>
 </div>
-
-
-<script>
-    function initMap() {
-        var uluru = { lat: 	39.1130484, lng: -77.565853};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuwkRt4Mde-XNOF3vBESuIikYAiTF4gCg&callback=initMap">
-
-</script>
-</script>
         </div>
         <div class="push"></div>
     </div>

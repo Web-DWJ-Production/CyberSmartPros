@@ -7,10 +7,10 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -92,13 +92,13 @@
                     <div class="sub-row">Feedback is the lifeblood of our business.</div>
                     <div class="sub-row">Please contact us at:</div>
                     <div class="sub-row">703-678-9053</div>
-                    <div class="sub-row">info@cybersmartpros.com</div>
+                    <a id="footer-email" class="sub-row" href="#">info@cybersmartpros.com</a>
                 </div>
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="index.html">Home</a></div>
                     <div class="sub-row"><a href="aboutus.html">About Us</a></div>
                     <div class="sub-row"><a href="aboutus.html#mission-vision-value">Mission, Vision, Values</a></div>
-                    <div class="sub-row"><a href="executiveTeam.html">Executive Team</a></div>
+                    <div class="sub-row"><a href="executiveTeam.html">Our Leadership</a></div>
                 </div>
                 <div class="row-column" flex>
                     <div class="sub-row"><a href="capabilities.html">Capabilities & Services</a></div>
@@ -116,5 +116,12 @@
         </div>
     </div>
 </body>
+
+<script>
+        var link = document.getElementById('footer-email');
+        link.onclick = function () {
+            this.href = "mailto:info@cybersmartpros.com?subject=Data&body=cybersmartpros.com";
+        };
+</script>
 
 </html>

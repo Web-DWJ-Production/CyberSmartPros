@@ -7,10 +7,17 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
+<<<<<<< HEAD
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+=======
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+>>>>>>> 1e79857c06ace2b2ed78dead36060b355bf2209e
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -79,48 +86,20 @@
         </nav>
 
         <div class="mainBody">
-            <style>
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-</style>
-
-<div class="section">
-    <div class="section-header">
-        <h2>Cyber Smart Pros Headquarters</h2>
-    </div>
-    <div class="section-header-underline"></div>
-    <div class="section-map">
-        <div class="contactus">
-            <div><i class="material-icons">&#xE0C8;</i> 202 Church St SE, Leesburg, VA 20175, US</div>
-            <div><i class="material-icons">&#xE0D0;</i> info@cybersmartpros.com</div>
-            <div><i class="material-icons">&#xE0CF;</i> 703-678-9053</div>
-        </div>
-        <div id="map"></div>
+            <div class="content-body comingSoon">
+    
+    <div class="full-background-img-container">
+        <div class="texture-overlay"></div>
+        <div class="gradient-overlay"></div>
+        <div class="parallax-backimg" back-img="images/construction.jpg"></div>
+    </div>  
+    
+    <div class="comingContent">
+        <div class="comingText top">Our Website Is Going Through A Re-design</div>
+        <div class="comingTitle">Under Construction</div>
+        <div class="comingText bottom">Please Check Back Shortly For This Content</div>
     </div>
 </div>
-
-
-<script>
-    function initMap() {
-        var uluru = { lat: 	39.1130484, lng: -77.565853};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuwkRt4Mde-XNOF3vBESuIikYAiTF4gCg&callback=initMap">
-
-</script>
-</script>
         </div>
         <div class="push"></div>
     </div>

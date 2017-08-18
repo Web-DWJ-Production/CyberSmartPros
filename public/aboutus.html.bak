@@ -7,10 +7,17 @@
     <!-- Google Analytics -->
     <script>
         (function (i, s, o, g, r, a, m) {
+<<<<<<< HEAD
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+=======
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
                 m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+>>>>>>> 1e79857c06ace2b2ed78dead36060b355bf2209e
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-104741644-1', 'auto');
@@ -79,48 +86,86 @@
         </nav>
 
         <div class="mainBody">
-            <style>
-    #map {
-        height: 400px;
-        width: 100%;
-    }
-</style>
+            <div class="content-body about">
+    <div class="subpage-header">
+        <div class="header-title">About Us</div> 
+        <div class="background-img-container">
+            <div class="texture-overlay"></div>
+            <div class="gradient-overlay"></div>
+            <div class="parallax-backimg" back-img="images/washington-dc2-mini.jpg"></div>
+        </div>       
+    </div>
 
-<div class="section">
-    <div class="section-header">
-        <h2>Cyber Smart Pros Headquarters</h2>
+    <div class="content-container content-text">
+        <span class="bold">Cyber Smart Pros, LLC (CSP)</span> provides information technology and management consulting services to federal, state, and local governments as well as private sector companies. Its core services are advisory, cybersecurity, and software development services. The Company is a verified Service Disabled Veteran Owned Small Business (SDVOSB) by the U.S. Department of Veterans Affairs. The Virginia Department of  Small Business and Supplier Diversity certified the company as a service-disabled veteran, minority-owned, and a micro business.
     </div>
-    <div class="section-header-underline"></div>
-    <div class="section-map">
-        <div class="contactus">
-            <div><i class="material-icons">&#xE0C8;</i> 202 Church St SE, Leesburg, VA 20175, US</div>
-            <div><i class="material-icons">&#xE0D0;</i> info@cybersmartpros.com</div>
-            <div><i class="material-icons">&#xE0CF;</i> 703-678-9053</div>
+    <!-- Certifications -->
+    <div class="content-container full-row">
+        <div class="row-layout cetification-container" layout="row" layout-xs="column">
+            <div class="row-column" flex>
+                <img src="images/logos/sdvosb.png">
+            </div>
+            <div class="row-column" flex>
+                <img src="images/logos/swam-logo.png">
+            </div>
         </div>
-        <div id="map"></div>
     </div>
+
+    <!-- Mission & Vision -->
+    <div class="content-container" id="mission-vision-value">        
+        <div class="content-title add-line">
+            <div class="title-txt">Mission, Vision, & Values</div>
+            <div class="line"><hr></div>
+        </div>
+        
+        <div class="content-list-row">
+            <div class="list-row-title"><i class="material-icons">business</i> <span>Mission Statement</span></div>
+            <div class="list-row-text">We leverage information technology so our customers can focus on their mission.</div>
+        </div>
+
+        <div class="content-list-row">
+            <div class="list-row-title"><i class="material-icons">remove_red_eye</i> <span>Vision Statement</span></div>
+            <div class="list-row-text">Our customers think of us as an integral part of their teams - we all win together.</div>
+        </div>
+
+        <div class="content-list-row">
+            <div class="list-row-title"><i class="material-icons">wb_incandescent</i> <span>Values</span></div>
+            <div class="list-row-list">
+                <div class="list-item"><span>Integrity in Everything :</span> Our word is our bond. We build relationships on trust.</div>
+                <div class="list-item"><span>Mission First :</span> We only have one priority: solve the customer’s problem.</div>
+                <div class="list-item"><span>People Always :</span> We take care of our people so they can take care of the mission.</div>
+            </div>
+        </div>
+        
+    </div>
+
 </div>
 
-
+<!-- Smooth Scroll -->
 <script>
-    function initMap() {
-        var uluru = { lat: 	39.1130484, lng: -77.565853};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
+  // Need this for "newer" versions of jQuery, which have removed $.browser
+  $.browser = $.browser || {msie: false};
+</script>
+<script>
+    $('html, body').hide();
 
+    $(document)        
+    .ready(function() {
+        $(window).bind('hashchange', function(event) {
+            var tgt = location.hash.replace(/^#\/?/, '');
+            if (document.getElementById(tgt)) {
+                $('html, body').show();
+                $('body')[0].scrollTop = 0;
+                $.smoothScroll({scrollTarget: '#' + tgt});
+            }
+            else {
+                $('html, body').show();
+            }
+        });        
+        $(window).trigger('hashchange');
+    });
 </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuwkRt4Mde-XNOF3vBESuIikYAiTF4gCg&callback=initMap">
-
-</script>
-</script>
         </div>
         <div class="push"></div>
     </div>
