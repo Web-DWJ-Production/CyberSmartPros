@@ -11,9 +11,9 @@ pageControllers.controller('HomePage', [function(){
       ];
 
       ctrl.services = [
-          {'icon':'card_membership', 'title':'Advisory', 'url':'capabilities.html#advisory', 'text':'Our advisory services provide an independent and objective examination of an organization’s records and activities.'},
-          {'icon':'important_devices', 'title':'Cybersecurity', 'url':'capabilities.html#cyber', 'text':'Our cybersecurity services are based on the NIST Risk Management Framework (NIST SP 800-37) for federal, state and local customers. '},
-          {'icon':'backup', 'title':'Software Development', 'url':'capabilities.html#software', 'text':'Our experts support multiple software development methodologies (Agile, Waterfall, Spiral, Scrum, Kanban, DevOps, etc.) to meet the differing needs of our customers.'}
+          {'icon':'card_membership', 'title':'Advisory', 'url':'capabilities.html#advisory', 'text':'Our IT audit and assessments help our customers achieve and demonstrate their compliance with laws, standards and regulations.'},
+          {'icon':'important_devices', 'title':'Cybersecurity', 'url':'capabilities.html#cyber', 'text':'Our cybersecurity services help our customers protect their information systems and privacy from cyber threats and cyber crime.'},
+          {'icon':'backup', 'title':'Software Development', 'url':'capabilities.html#software', 'text':'Our experts apply agile and lean software development methodologies to deliver the software that customers really want.'}
       ];
 
       ctrl.latestNews = [

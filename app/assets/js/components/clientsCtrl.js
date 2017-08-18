@@ -5,9 +5,9 @@ pageControllers.controller('ClientsPage', [function(){
       ctrl.title = "Clients";
 
       ctrl.slides = [          
-          {'img':'images/logos/clients/USPHSEmblemColor.png', 'title':'U.S. Department of Health and Human Services', 'url':'https://www.usphs.gov/'},
+          {'img':'images/logos/clients/USPHSEmblemColor.png', 'title':'U.S. Public Health Service', 'url':'https://www.usphs.gov/'},
           {'img':'images/logos/clients/OASH.png', 'title':'Office of the Assistant Secretary for Health (OASH)', 'url':'https://www.hhs.gov/ash'},
-          {'img':'images/logos/clients/USDA_FNS.png', 'title':'U.S. Department of Agriculture', 'url':'https://www.usda.gov/'},
+          {'img':'images/logos/clients/USDA_FNS.png', 'title':'Food and Nutrition Service', 'url':'https://www.fns.usda.gov/'},
           {'img':'images/logos/clients/cncs_small.png', 'title':'Corporation for National and Community Service', 'url':'https://www.nationalservice.gov/'},
           {'img':'images/logos/clients/ACCTScreen Scrap.PNG', 'title':'American College of Commerce and Technology', 'url':'http://acct.edu/'},
           {'img':'images/logos/clients/orionria.png', 'title':'ORION Investment Advisors', 'url':'http://www.orionria.com/'},
