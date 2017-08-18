@@ -39,8 +39,8 @@ pageControllers.controller('HomePage', [function(){
       ctrl.title = "Home";
 
       ctrl.slides = [
-          {'img':'images/cyber-network.jpg', 'title':'Who We Are', 'text':'Innovative IT professionals committed to your success.'},
-          {'img':'images/washington-dc3.jpg', 'title':'Where We Are', 'text':'With a growing number of clients we are based out of the Washington, D.C. area.'},
+          {'img':'images/it-pros.jpg', 'title':'Who We Are', 'text':'Innovative IT professionals committed to your success.'},
+          {'img':'images/dc4.jpg', 'title':'Where We Are', 'text':'With a growing number of clients we are based out of the Washington, D.C. area.'},
           {'img':'images/computer-color.jpg', 'title':'What We Do', 'text':'We leverage information technology so our customers can focus on their missions.'}
       ];
 
